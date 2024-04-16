@@ -17,6 +17,7 @@ import img3 from '../../../public/bed 3.jpg'
 
 
 const Slider = () => {
+
     return (
         <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y, EffectCube]}
@@ -30,14 +31,17 @@ const Slider = () => {
             onSlideChange={() => console.log('slide change')}
 
         >
-        
+
+            
             <SwiperSlide><img className=' md:w-full md:h-screen ' src={img1} alt="" /></SwiperSlide>
             <SwiperSlide><img className=' md:w-full md:h-screen ' src={img2} alt="" /></SwiperSlide>
             <SwiperSlide><img className=' md:w-full md:h-screen ' src={img3} alt="" /></SwiperSlide>
             <SwiperSlide><img className=' md:w-full md:h-screen ' src={img1} alt="" /></SwiperSlide>
-            <SwiperSlide><img className=' md:w-full md:h-screen ' src={ img2 } alt="" /></SwiperSlide>
+            <SwiperSlide><img className=' md:w-full md:h-screen ' src={img2} alt="" /></SwiperSlide>
+
 
         </Swiper>
+
     );
 };
 

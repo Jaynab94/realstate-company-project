@@ -6,6 +6,8 @@ import RoomAndSuits from "../pages/roomAndSuits/RoomAndSuits";
 import Restaurent from "../pages/restaurant/Restaurent";
 import Location from "../pages/loaction/Location";
 import Support from "../pages/support/Support";
+import Login from "../pages/login/Login";
+import Register from "../pages/register/Register";
 
 const route = createBrowserRouter([
     {
@@ -34,6 +36,14 @@ const route = createBrowserRouter([
             {
                 path: '/support',
                 element: <Support></Support>
+            },
+            {
+                path: '/login',
+                element: <Login></Login>
+            },
+            {
+                path: '/register',
+                element: <Register></Register>
             }
         ]
     }
