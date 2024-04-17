@@ -6,8 +6,9 @@ import RoomAndSuits from "../pages/roomAndSuits/RoomAndSuits";
 import Restaurent from "../pages/restaurant/Restaurent";
 import Location from "../pages/loaction/Location";
 import Support from "../pages/support/Support";
-import Login from "../pages/login/Login";
+
 import Register from "../pages/register/Register";
+import LogInPage from "../pages/LogInPage/LogInPage";
 
 const route = createBrowserRouter([
     {
@@ -18,7 +19,8 @@ const route = createBrowserRouter([
 
             {
                 path: '/',
-                element: <Home></Home>
+                element: <Home></Home>,
+                loader: () => fetch('fakeapi.json'),
             },
             {
                 path: '/roomandsuite',
@@ -39,7 +41,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/login',
-                element: <Login></Login>
+                element:<LogInPage></LogInPage>
             },
             {
                 path: '/register',

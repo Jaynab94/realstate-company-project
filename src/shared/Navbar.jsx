@@ -1,9 +1,19 @@
 
+import { useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { LinearGradient } from 'react-text-gradients'
+import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 
 const Navbar = () => {
+
+    const { user, logOutUser } = useContext(AuthContext);
+    console.log(user, logOutUser)
+
+    //handle sign out
+
+
 
     const NavLinks = <
 
@@ -118,6 +128,25 @@ const Navbar = () => {
 
 
     </>
+
+
+
+    const handlelogout = () => {
+
+        console.log('sign out')
+
+        logOutUser()
+            .then(result => {
+                console.log(result)
+
+            })
+            .catch(error => {
+                console.log(error)
+
+            })
+
+
+    }
     return (
         <div className="navbar bg-red-200 mx-auto  ">
             <div className="navbar-start">
@@ -144,13 +173,20 @@ const Navbar = () => {
             <div className="navbar-end ">
 
 
-                <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-                    <div className="w-20 rounded-full">
-                        <img alt="Tailwind CSS Navbar component" src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg" />
-                    </div>
-                </div>
+                
 
-                <Link to={'/login'}><button className="btn btn-ghost ml-4 font-serif">Log in</button></Link>
+                {
+                    user ?
+                        <div className="flex">
+                            <img className="w-20 rounded-full " src={user.photoUrL} />
+                            <button onClick={handlelogout} className="btn btn-ghost">sign out</button>
+                        </div>
+
+                        :
+                        <Link to={'/login'}><button className="btn btn-ghost ml-4 font-serif">sign in</button></Link>
+                }
+
+
 
 
             </div>

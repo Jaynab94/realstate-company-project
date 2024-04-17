@@ -1,0 +1,121 @@
+ [
+      {
+        "image": "path/to/image1.jpg",
+        "estate_title": "Mansion in Beverly Hills",
+        "id": 1,
+        "segment_name": "Luxurious",
+        "description": "Exquisite mansion located in the prestigious Beverly Hills neighborhood.",
+        "price": "$10,000,000",
+        "status": "sale",
+        "area": "10,000 sq ft",
+        "location": "Beverly Hills, CA",
+        "facilities": ["infinity pool", "home theater", "wine cellar", "gym"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image2.jpg",
+        "estate_title": "Penthouse with Panoramic Views",
+        "id": 2,
+        "segment_name": "Luxurious",
+        "description": "Luxurious penthouse offering breathtaking views of the city skyline.",
+        "price": "$5,000,000",
+        "status": "sale",
+        "area": "5,000 sq ft",
+        "location": "Manhattan, NY",
+        "facilities": ["rooftop terrace", "spa", "private elevator"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image3.jpg",
+        "estate_title": "Private Island Retreat",
+        "id": 3,
+        "segment_name": "Luxurious",
+        "description": "Exclusive private island estate with pristine beaches and unparalleled luxury.",
+        "price": "$20,000,000",
+        "status": "sale",
+        "area": "20 acres",
+        "location": "Caribbean",
+        "facilities": ["helipad", "yacht dock", "tennis court", "guest villas"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image4.jpg",
+        "estate_title": "Historic Castle in Europe",
+        "id": 4,
+        "segment_name": "Luxurious",
+        "description": "Magnificent castle steeped in history and grandeur, set amidst rolling hills.",
+        "price": "$15,000,000",
+        "status": "sale",
+        "area": "50,000 sq ft",
+        "location": "Europe",
+        "facilities": ["ballroom", "library", "gardens", "wine tasting room"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image5.jpg",
+        "estate_title": "Modern Villa with Ocean Views",
+        "id": 5,
+        "segment_name": "Luxurious",
+        "description": "Contemporary villa boasting stunning ocean views and sleek design.",
+        "price": "$8,000,000",
+        "status": "sale",
+        "area": "7,000 sq ft",
+        "location": "Malibu, CA",
+        "facilities": ["infinity pool", "home cinema", "gym"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image6.jpg",
+        "estate_title": "Luxury Apartment in Paris",
+        "id": 6,
+        "segment_name": "Luxurious",
+        "description": "Chic apartment located in the heart of Paris with views of the Eiffel Tower.",
+        "price": "$4,500,000",
+        "status": "sale",
+        "area": "3,000 sq ft",
+        "location": "Paris, France",
+        "facilities": ["concierge service", "balcony", "sauna"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image7.jpg",
+        "estate_title": "Grand Manor House in England",
+        "id": 7,
+        "segment_name": "Luxurious",
+        "description": "Stately manor house set in the English countryside with extensive grounds.",
+        "price": "$12,000,000",
+        "status": "sale",
+        "area": "15,000 sq ft",
+        "location": "England",
+        "facilities": ["gardens", "indoor pool", "tennis court", "guest cottages"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image8.jpg",
+        "estate_title": "Mountain Retreat in Aspen",
+        "id": 8,
+        "segment_name": "Luxurious",
+        "description": "Luxury retreat nestled in the mountains of Aspen with ski-in/ski-out access.",
+        "price": "$6,500,000",
+        "status": "sale",
+        "area": "8,000 sq ft",
+        "location": "Aspen, CO",
+        "facilities": ["hot tub", "fireplace", "home theater"],
+        "button_text": "View Property"
+      },
+      {
+        "image": "path/to/image9.jpg",
+        "estate_title": "Villa on the Amalfi Coast",
+        "id": 9,
+        "segment_name": "Luxurious",
+        "description": "Elegant villa overlooking the stunning coastline of the Amalfi Coast.",
+        "price": "$9,500,000",
+        "status": "sale",
+        "area": "6,000 sq ft",
+        "location": "Amalfi Coast, Italy",
+        "facilities": ["infinity pool", "terrace", "wine cellar"],
+        "button_text": "View Property"
+      }
+    ]
+  
+  
