@@ -2,7 +2,7 @@
 
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaGithub, FaGoogle } from 'react-icons/fa';
+import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LinearGradient } from 'react-text-gradients';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -14,6 +14,7 @@ const LogInPage = () => {
 
     const [loginError, setLoginError] = useState();
     const [successMessage, setSuccessMessage] = useState();
+    const [showPassword, setShowPassword] = useState(false);
 
     const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
 
@@ -122,17 +123,35 @@ const LogInPage = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" required name='email' placeholder="email" className="input input-bordered"  />
+                            <input type="email" required name='email' placeholder="email" className="input input-bordered" />
                         </div>
-                        <div className="form-control">
+                        <div className="form-control ">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" required placeholder="password" name='password' className="input input-bordered" required />
+
+                            <input
+                                type={showPassword ? "text" : "password"}
+                                required
+                                placeholder='password'
+                                name='password'
+                                className="input input-bordered " />
+
+                            <span onClick={() => setShowPassword(!showPassword)} className='flex  justify-end -translate-y-8'>
+                                {
+                                    showPassword ? <FaEyeSlash className=" text-2xl text-gray-500" /> : <FaEye className="text-2xl text-gray-500" />
+                                }
+
+                            </span>
+
+
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
+
                         </div>
+
+
                         <div className="form-control mt-6">
                             <button className="btn btn-ghost bg-transparent border border-blue-700"><LinearGradient gradient={['to right', 'red, blue']}>LOG IN</LinearGradient></button>
                         </div>

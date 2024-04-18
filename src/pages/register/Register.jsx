@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 
@@ -14,8 +15,9 @@ import { AuthContext } from '../../AuthProvider/AuthProvider';
 const Register = () => {
     const { createUser } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState('');
-    
+
     const [successMessage, setSuccessMessage] = useState('');
+    const [showPassword, setShowPassword] = useState(false);
 
 
     const handleRegister = (e) => {
@@ -110,11 +112,21 @@ const Register = () => {
                             />
 
                         </div>
-                        <div>
-                            <label htmlFor="password" className="text-sm sr-only">password</label>
-                            <input id="password" name='password' type="password" placeholder="password" required className="w-full rounded-md p-2 "
+                        <div className='flex items-center gap-4'>
+                            <label htmlFor="password"
+                                className="text-sm sr-only">password</label>
+                            <input id="password"
+                                name='password'
+                                type={showPassword ? "text" : "password"}
+                                placeholder="password" required
+                                className="w-full rounded-md p-2 "
                             />
-                            <span>show</span>
+                            <span onClick={() => setShowPassword(!showPassword)}>
+
+                                {
+                                    showPassword ? <FaEyeSlash className="w-4 h-4 text-gray-500" /> : <FaEye className="w-4 h-4 text-gray-500" />
+                                }
+                            </span>
 
                         </div>
 
