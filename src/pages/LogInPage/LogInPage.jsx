@@ -6,13 +6,18 @@ import { FaGithub, FaGoogle } from 'react-icons/fa';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LinearGradient } from 'react-text-gradients';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+import { useState } from "react";
 
 
 
 const LogInPage = () => {
 
+    const [loginError, setLoginError] = useState();
+    const [successMessage, setSuccessMessage] = useState();
 
     const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
+
+
 
     const location = useLocation();
     const Navigate = useNavigate();
@@ -24,20 +29,40 @@ const LogInPage = () => {
         const form = new FormData(e.currentTarget)
         const email = form.get('email')
         const password = form.get('password')
-        console.log(email, password)
+        // console.log(email, password)
+
+        //reset form values
+        setLoginError('');
+        setSuccessMessage('');
+
+        //validation
+        if (!email || !password) {
+            setLoginError('Please fill in all fields');
+            return;
+        }
+
+        if (password.length < 6) {
+            setLoginError('Password must be at least 6 characters');
+            return;
+        }
+
+
 
         // sign in user
 
         signInUser(email, password)
             .then(result => {
-                console.log(result.user);
+                // console.log(result.user);
+
+                setSuccessMessage('You have successfully signed in!')
 
                 // Navigate after sign in
                 Navigate(location?.state ? location?.state : '/')
 
             })
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                setLoginError(error.message)
             })
 
     }
@@ -97,13 +122,13 @@ const LogInPage = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input type="email" name='email' placeholder="email" className="input input-bordered" required />
+                            <input type="email" required name='email' placeholder="email" className="input input-bordered"  />
                         </div>
                         <div className="form-control">
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="password" placeholder="password" name='password' className="input input-bordered" required />
+                            <input type="password" required placeholder="password" name='password' className="input input-bordered" required />
                             <label className="label">
                                 <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
                             </label>
@@ -112,6 +137,18 @@ const LogInPage = () => {
                             <button className="btn btn-ghost bg-transparent border border-blue-700"><LinearGradient gradient={['to right', 'red, blue']}>LOG IN</LinearGradient></button>
                         </div>
                     </form>
+                    {
+                        loginError &&
+                        <p className="text-red-500 text-center">
+                            {loginError}
+                        </p>
+                    }
+                    {
+                        successMessage &&
+                        <p className="text-green-500 text-center">
+                            {successMessage}
+                        </p>
+                    }
 
 
 

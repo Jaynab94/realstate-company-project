@@ -4,15 +4,24 @@ import 'animate.css';
 
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
+
+
 
 
 
 const Register = () => {
     const { createUser } = useContext(AuthContext);
+    const [registerError, setRegisterError] = useState('');
+    
+    const [successMessage, setSuccessMessage] = useState('');
+
 
     const handleRegister = (e) => {
+
+
+
         e.preventDefault();
         const form = new FormData(e.currentTarget);
         const name = form.get('name');
@@ -20,15 +29,41 @@ const Register = () => {
         const password = form.get('password');
         console.log(name, email, password);
 
+
+        //reset form values
+        setRegisterError('');
+        setSuccessMessage('');
+
+
+        //validation
+
+        if (password.length < 6) {
+            setRegisterError('Password must be at least 6 characters');
+            return;
+        } else if (!/^(?=.*[a-z])(?=.*[A-Z]).+$/.test(password)) {
+            setRegisterError('Password must contain at least one lowercase letter and one uppercase letter');
+            return;
+        }
+
+
+
+
+
+
         //crate a user
         createUser(email, password)
             .then((res) => {
-                console.log(res.user)
+                console.log(res.user);
+                setSuccessMessage(' Registered Successfully!!');
+
+
 
             })
 
             .catch(error => {
-                console.error(error)
+                console.error(error);
+                setRegisterError(error.message);
+
 
             })
 
@@ -57,7 +92,7 @@ const Register = () => {
                         className="self-stretch space-y-3">
                         <div>
                             <label htmlFor="name" className="text-sm sr-only">Your name</label>
-                            <input id="name" type="text" name='name' placeholder="Your name" className="w-full rounded-md p-2"
+                            <input id="name" required type="text" name='name' placeholder="Your name" className="w-full rounded-md p-2"
 
 
                             />
@@ -65,7 +100,7 @@ const Register = () => {
                         </div>
                         <div>
                             <label htmlFor="email" className="text-sm sr-only">Your email</label>
-                            <input id="email" type="email" name='email' placeholder="Your email" className="w-full rounded-md  p-2"
+                            <input id="email" required type="email" name='email' placeholder="Your email" className="w-full rounded-md  p-2"
                             />
 
                         </div>
@@ -77,15 +112,28 @@ const Register = () => {
                         </div>
                         <div>
                             <label htmlFor="password" className="text-sm sr-only">password</label>
-                            <input id="password" name='password' type="password" placeholder="new password" className="w-full rounded-md p-2 "
+                            <input id="password" name='password' type="password" placeholder="password" required className="w-full rounded-md p-2 "
                             />
+                            <span>show</span>
 
                         </div>
 
 
 
+
                         <button className="w-full animate__animated animate__fadeInLeft py-2 font-semibold rounded  border-blue-600 border-2"><LinearGradient gradient={['to right', 'red, blue']}>REGISTER</LinearGradient></button>
                     </form>
+
+                    {
+                        registerError && <p className="text-red-500 text-xl "> {registerError}</p>
+                    }
+
+
+                    {
+
+                        successMessage && <p className="text-green-500 text-2xl"><LinearGradient gradient={['to right', 'red, blue']}> {successMessage}</LinearGradient> </p>
+                    }
+
                     <p className="px-6 text-sm text-center py-6">Already have an account?
                         <Link to={'/login'}><span className='hover:underline font-bold ml-4'>Sign In</span></Link>
                     </p>
