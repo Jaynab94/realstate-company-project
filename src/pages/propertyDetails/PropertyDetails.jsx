@@ -1,5 +1,4 @@
-import { FaFastBackward } from "react-icons/fa";
-import { FaBackward } from "react-icons/fa6";
+
 import { IoArrowBack } from "react-icons/io5";
 import { Link, useLoaderData, useParams } from "react-router-dom";
 

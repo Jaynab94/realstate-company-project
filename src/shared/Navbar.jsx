@@ -4,6 +4,8 @@ import { Link, NavLink } from "react-router-dom";
 import { LinearGradient } from 'react-text-gradients'
 import { AuthContext } from "../AuthProvider/AuthProvider";
 
+import { Tooltip as ReactTooltip } from 'react-tooltip'
+
 
 
 const Navbar = () => {
@@ -173,17 +175,27 @@ const Navbar = () => {
             <div className="navbar-end ">
 
 
-                
+
 
                 {
                     user ?
-                        <div className="flex">
-                            <img className="w-20 rounded-full " src={user.photoUrL} />
-                            <button onClick={handlelogout} className="btn btn-ghost">sign out</button>
+                        <div className="flex gap-4">
+                            <img id="image-id" className="w-14 rounded-full "
+                                src={user?.photoURL || "https://i.ibb.co/dJKZzrg/default-pic.png"} />
+
+                            <ReactTooltip
+                            anchorId="image-id"
+                            place="left"
+                            content={user?.displayName}
+                            
+                            
+                            />
+
+                            <button onClick={handlelogout} className="btn bg-red-200">sign out</button>
                         </div>
 
                         :
-                        <Link to={'/login'}><button className="btn btn-ghost ml-4 font-serif">sign in</button></Link>
+                        <Link to={'/login'}><button className="btn bg-red-200 ml-4 font-serif">sign in</button></Link>
                 }
 
 

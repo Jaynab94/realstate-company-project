@@ -2,7 +2,7 @@ import { LinearGradient } from 'react-text-gradients';
 import img1 from '../../../public/bed 2.jpg'
 import 'animate.css';
 
-import { Link } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate, } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
@@ -12,12 +12,17 @@ import { FaEye, FaEyeSlash } from 'react-icons/fa';
 
 
 
+
 const Register = () => {
-    const { createUser } = useContext(AuthContext);
+    const { createUser, updateUser } = useContext(AuthContext);
     const [registerError, setRegisterError] = useState('');
 
     const [successMessage, setSuccessMessage] = useState('');
     const [showPassword, setShowPassword] = useState(false);
+    const location = useLocation();
+    const Navigate = useNavigate();
+
+
 
 
     const handleRegister = (e) => {
@@ -54,13 +59,20 @@ const Register = () => {
 
         //crate a user
         createUser(email, password)
-            .then((res) => {
-                console.log(res.user);
-                setSuccessMessage(' Registered Successfully!!');
+            .then(result => {
+                console.log(result.user);
 
+                setSuccessMessage('You have successfully signed in!');
 
+                //update user
+                updateUser(name, Image)
+                    .then(() => {
+                        // Navigate after sign in
+                        Navigate(location?.state ? location?.state : '/')
 
+                    })
             })
+
 
             .catch(error => {
                 console.error(error);

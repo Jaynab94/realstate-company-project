@@ -1,5 +1,5 @@
 
-
+import PropTypes from 'prop-types';
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaEye, FaEyeSlash, FaGithub, FaGoogle } from 'react-icons/fa';
@@ -19,7 +19,7 @@ const LogInPage = () => {
     const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
 
 
-
+    //navigation
     const location = useLocation();
     const Navigate = useNavigate();
 
@@ -53,7 +53,7 @@ const LogInPage = () => {
 
         signInUser(email, password)
             .then(result => {
-                // console.log(result.user);
+                console.log(result.user);
 
                 setSuccessMessage('You have successfully signed in!')
 
@@ -72,6 +72,12 @@ const LogInPage = () => {
         googleLogin()
             .then(result => {
                 console.log(result.user);
+
+                setSuccessMessage('You have successfully signed in!')
+
+                // Navigate after sign in
+                Navigate(location?.state ? location?.state : '/')
+
             })
             .catch(error => {
                 console.error(error)
@@ -86,6 +92,12 @@ const LogInPage = () => {
         githubLogin()
             .then(result => {
                 console.log(result.user);
+
+                setSuccessMessage('You have successfully signed in!')
+
+                // Navigate after sign in
+                Navigate(location?.state ? location?.state : '/')
+
             })
             .catch(
                 error => {
@@ -106,10 +118,10 @@ const LogInPage = () => {
                 <title>Luxe | Login</title>
             </Helmet>
 
-            <div className="hero min-h-screen bg-base-200 mb-10 mt-10 animate__animated animate__backInDown ">
+            <div className="hero md:min-h-screen bg-base-200 mb-10 mt-10 animate__animated animate__backInDown ">
 
 
-                <div className="  bg-red-200 w-[500px] shadow-2xl ">
+                <div className="  bg-red-200 md:w-[500px] shadow-2xl ">
                     <div className='mt-4 text-center'>
                         <LinearGradient className="font-bold text-4xl   font-serif" gradient={['to right', 'red, blue']}> Luminary Luxe </LinearGradient>
                     </div>
@@ -190,12 +202,18 @@ const LogInPage = () => {
                             className='btn btn-ghost w-full border-blue-700'> <LinearGradient className='flex items-center gap-2' gradient={['to right', 'red, blue']}> <FaGithub className='text-2xl'></FaGithub>Github Login</LinearGradient></button>
                     </div>
 
-                    <p className='text-center p-4'>Dont have any account <Link to={'/register'}> <span> Register</span></Link></p>
+                    <p className='text-center p-4'>Dont have any account <Link to={'/register'}> <span className='font-bold mr-4'> Register</span></Link></p>
                 </div>
 
             </div>
         </div>
     );
 };
+
+LogInPage.propTypes = {
+    signInUser: PropTypes.func.isRequired,
+    googleLogin: PropTypes.func.isRequired,
+    githubLogin: PropTypes.func.isRequired,
+}
 
 export default LogInPage;

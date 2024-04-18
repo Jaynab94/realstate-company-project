@@ -34,7 +34,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/roomandsuite',
-                element: <RoomAndSuits></RoomAndSuits>
+                element: <PrivateRouts> <RoomAndSuits></RoomAndSuits></PrivateRouts>
             },
             {
                 path: '/restaurant',
