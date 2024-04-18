@@ -9,6 +9,8 @@ import Support from "../pages/support/Support";
 
 import Register from "../pages/register/Register";
 import LogInPage from "../pages/LogInPage/LogInPage";
+import PropertyDetails from "../pages/propertyDetails/PropertyDetails";
+import PrivateRouts from "./PrivateRouts";
 
 const route = createBrowserRouter([
     {
@@ -20,7 +22,15 @@ const route = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-                loader: () => fetch('fakeapi.json'),
+                loader: () => fetch('/fakeapi.json'),
+            },
+
+            {
+                path: '/cards/:id',
+                element: <PrivateRouts><PropertyDetails></PropertyDetails></PrivateRouts>,
+                loader: () => fetch('/fakeapi.json'),
+
+
             },
             {
                 path: '/roomandsuite',
@@ -41,7 +51,7 @@ const route = createBrowserRouter([
             },
             {
                 path: '/login',
-                element:<LogInPage></LogInPage>
+                element: <LogInPage></LogInPage>
             },
             {
                 path: '/register',

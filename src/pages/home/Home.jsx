@@ -18,11 +18,14 @@ const Home = () => {
             </Helmet>
             <Slider></Slider>
 
+            
+
 
             {/* card  */}
-            <div>
+            <div className="grid lg:grid-cols-3 gap-4 p-2">
 
                 {
+                    
                    cards.map(card=><Card key={card.id} card={card}></Card>)
                         
 

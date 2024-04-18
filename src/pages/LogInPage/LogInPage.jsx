@@ -3,14 +3,19 @@
 import { useContext } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaGithub, FaGoogle } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { LinearGradient } from 'react-text-gradients';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
 
 
 
 const LogInPage = () => {
-    const { signInUser, googleLogin,githubLogin } = useContext(AuthContext)
+
+
+    const { signInUser, googleLogin, githubLogin } = useContext(AuthContext);
+
+    const location = useLocation();
+    const Navigate = useNavigate();
 
     const handleSignin = (e) => {
 
@@ -27,6 +32,9 @@ const LogInPage = () => {
             .then(result => {
                 console.log(result.user);
 
+                // Navigate after sign in
+                Navigate(location?.state ? location?.state : '/')
+
             })
             .catch(error => {
                 console.error(error)
@@ -36,29 +44,29 @@ const LogInPage = () => {
 
     const handleGoogleLogin = () => {
         googleLogin()
-        .then(result => {
-             console.log(result.user);
-        })
-        .catch(error => {
-             console.error(error)
- 
-        })
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(error => {
+                console.error(error)
+
+            })
 
 
     }
 
     const handleGithubLogin = () => {
-        
+
         githubLogin()
-        .then(result => {
-             console.log(result.user);
-        })
-        .catch(
-            error => {
-                console.error(error)
-            }
-        )
-        
+            .then(result => {
+                console.log(result.user);
+            })
+            .catch(
+                error => {
+                    console.error(error)
+                }
+            )
+
 
     }
 
@@ -122,8 +130,8 @@ const LogInPage = () => {
 
 
                         <button
-                        onClick={handleGithubLogin}
-                         className='btn btn-ghost w-full border-blue-700'> <LinearGradient className='flex items-center gap-2' gradient={['to right', 'red, blue']}> <FaGithub className='text-2xl'></FaGithub>Github Login</LinearGradient></button>
+                            onClick={handleGithubLogin}
+                            className='btn btn-ghost w-full border-blue-700'> <LinearGradient className='flex items-center gap-2' gradient={['to right', 'red, blue']}> <FaGithub className='text-2xl'></FaGithub>Github Login</LinearGradient></button>
                     </div>
 
                     <p className='text-center p-4'>Dont have any account <Link to={'/register'}> <span> Register</span></Link></p>

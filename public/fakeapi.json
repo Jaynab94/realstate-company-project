@@ -1,121 +1,164 @@
- [
-      {
-        "image": "path/to/image1.jpg",
-        "estate_title": "Mansion in Beverly Hills",
-        "id": 1,
-        "segment_name": "Luxurious",
-        "description": "Exquisite mansion located in the prestigious Beverly Hills neighborhood.",
-        "price": "$10,000,000",
-        "status": "sale",
-        "area": "10,000 sq ft",
-        "location": "Beverly Hills, CA",
-        "facilities": ["infinity pool", "home theater", "wine cellar", "gym"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image2.jpg",
-        "estate_title": "Penthouse with Panoramic Views",
-        "id": 2,
-        "segment_name": "Luxurious",
-        "description": "Luxurious penthouse offering breathtaking views of the city skyline.",
-        "price": "$5,000,000",
-        "status": "sale",
-        "area": "5,000 sq ft",
-        "location": "Manhattan, NY",
-        "facilities": ["rooftop terrace", "spa", "private elevator"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image3.jpg",
-        "estate_title": "Private Island Retreat",
-        "id": 3,
-        "segment_name": "Luxurious",
-        "description": "Exclusive private island estate with pristine beaches and unparalleled luxury.",
-        "price": "$20,000,000",
-        "status": "sale",
-        "area": "20 acres",
-        "location": "Caribbean",
-        "facilities": ["helipad", "yacht dock", "tennis court", "guest villas"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image4.jpg",
-        "estate_title": "Historic Castle in Europe",
-        "id": 4,
-        "segment_name": "Luxurious",
-        "description": "Magnificent castle steeped in history and grandeur, set amidst rolling hills.",
-        "price": "$15,000,000",
-        "status": "sale",
-        "area": "50,000 sq ft",
-        "location": "Europe",
-        "facilities": ["ballroom", "library", "gardens", "wine tasting room"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image5.jpg",
-        "estate_title": "Modern Villa with Ocean Views",
-        "id": 5,
-        "segment_name": "Luxurious",
-        "description": "Contemporary villa boasting stunning ocean views and sleek design.",
-        "price": "$8,000,000",
-        "status": "sale",
-        "area": "7,000 sq ft",
-        "location": "Malibu, CA",
-        "facilities": ["infinity pool", "home cinema", "gym"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image6.jpg",
-        "estate_title": "Luxury Apartment in Paris",
-        "id": 6,
-        "segment_name": "Luxurious",
-        "description": "Chic apartment located in the heart of Paris with views of the Eiffel Tower.",
-        "price": "$4,500,000",
-        "status": "sale",
-        "area": "3,000 sq ft",
-        "location": "Paris, France",
-        "facilities": ["concierge service", "balcony", "sauna"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image7.jpg",
-        "estate_title": "Grand Manor House in England",
-        "id": 7,
-        "segment_name": "Luxurious",
-        "description": "Stately manor house set in the English countryside with extensive grounds.",
-        "price": "$12,000,000",
-        "status": "sale",
-        "area": "15,000 sq ft",
-        "location": "England",
-        "facilities": ["gardens", "indoor pool", "tennis court", "guest cottages"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image8.jpg",
-        "estate_title": "Mountain Retreat in Aspen",
-        "id": 8,
-        "segment_name": "Luxurious",
-        "description": "Luxury retreat nestled in the mountains of Aspen with ski-in/ski-out access.",
-        "price": "$6,500,000",
-        "status": "sale",
-        "area": "8,000 sq ft",
-        "location": "Aspen, CO",
-        "facilities": ["hot tub", "fireplace", "home theater"],
-        "button_text": "View Property"
-      },
-      {
-        "image": "path/to/image9.jpg",
-        "estate_title": "Villa on the Amalfi Coast",
-        "id": 9,
-        "segment_name": "Luxurious",
-        "description": "Elegant villa overlooking the stunning coastline of the Amalfi Coast.",
-        "price": "$9,500,000",
-        "status": "sale",
-        "area": "6,000 sq ft",
-        "location": "Amalfi Coast, Italy",
-        "facilities": ["infinity pool", "terrace", "wine cellar"],
-        "button_text": "View Property"
-      }
-    ]
-  
-  
+[
+  {
+    "image": "https://i.ibb.co/ZMGRT23/flat-1.jpg",
+    "estate_title": "Mansion in Beverly Hills",
+    "id": 1,
+    "segment_name": "Luxurious",
+    "description": "Exquisite mansion located in the prestigious Beverly Hills neighborhood.",
+    "details": " Step into luxury with this exquisite mansion nestled in the prestigious Beverly Hills neighborhood. Spanning an impressive 10,000 square feet, this property offers unparalleled elegance and sophistication. As you enter, you're greeted by a grand foyer that sets the tone for the opulence that awaits within. The mansion boasts a plethora of amenities, including a stunning pool where you can bask in the California sun and unwind after a long day. For movie enthusiasts, a state-of-the-art home theater provides the perfect setting for cinematic experiences right at home. Stay active and fit in the fully equipped gym, ensuring that your health and wellness are always a top priority.",
+    "price": "$10,000,000",
+    "status": "sale",
+    "area": "10,000 sq ft",
+    "location": "Beverly,CA",
+    "facilities": [
+      " Pool",
+      "Home-theater",
+      "Gym"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/vHBgvnr/flat-3.jpg",
+    "estate_title": "Penthouse with Panoramic Views",
+    "id": 2,
+    "segment_name": "Luxurious",
+    "description": "Luxurious resort offering breathtaking views of the city skyline.",
+    "details": " Experience urban luxury at its finest with this penthouse offering breathtaking views of the iconic Manhattan skyline. Situated in the heart of New York City, this luxurious retreat spans 5,000 square feet and exudes sophistication from every corner. The penthouse is designed to provide the ultimate in comfort and convenience, with amenities such as a fully equipped gym, spa, and home theater. Whether you're entertaining guests or simply enjoying a quiet evening at home, this penthouse offers the perfect setting for every occasion. ",
+    "price": "$5,000,000",
+    "status": "sale",
+    "area": "5,000 sq ft",
+    "location": "Manhattan, NY",
+    "facilities": [
+      "Gym",
+      "Spa",
+      "Home-theater"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/jyXwGJY/kitchen-1336160-1280.jpg",
+    "estate_title": "Private Island Retreat",
+    "id": 3,
+    "segment_name": "Luxurious",
+    "description": "Exclusive private island estate with pristine beaches and unparalleled luxury.",
+    "details": " Escape to your own private paradise with this exclusive island estate located in the serene Caribbean. Spanning over 20 acres, this retreat offers a sanctuary of tranquility and luxury unlike any other. As you step onto the pristine beaches, you'll feel the stresses of everyday life melt away, replaced by a sense of serenity and calm. The estate boasts a range of amenities designed to indulge your every desire, including a helipad for convenient access, tennis courts for outdoor recreation, and luxurious villas where you can relax and unwind in style. ",
+    "price": "$20,000,000",
+    "status": "rent",
+    "area": "20 acres",
+    "location": "Caribbean",
+    "facilities": [
+      "Helipad",
+      "Tennis ",
+      "Villas"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/8mQQPXC/living-room-4013531-1280.jpg",
+    "estate_title": "Historic Castle in Europe",
+    "id": 4,
+    "segment_name": "Luxurious",
+    "description": "Magnificent castle steeped in history and grandeur, set amidst rolling hills.",
+    "details": "Immerse yourself in history and grandeur with this magnificent castle nestled amidst the rolling hills of Europe. Spread across 50,000 square feet, this historic property offers a glimpse into a bygone era, where kings and queens once roamed the halls. The castle is steeped in history and boasts a range of features, including a library filled with rare manuscripts, enchanting gardens where you can stroll amidst the beauty of nature, and a gym where you can stay active and fit. ",
+    "price": "$15,000,000",
+    "status": "sale",
+    "area": "50,000 sq ft",
+    "location": "Europe",
+    "facilities": [
+      "Library",
+      "Gardens",
+      "gym"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/Yj6SXgJ/flat-6.jpg",
+    "estate_title": "Modern Villa with Ocean Views",
+    "id": 5,
+    "segment_name": "Luxurious",
+    "description": "Contemporary villa boasting stunning ocean views and sleek design.",
+    "details": "Embrace contemporary luxury with this stunning villa boasting panoramic ocean views and sleek modern design. Located in the picturesque coastal town of Malibu, this villa offers the perfect blend of style and comfort. The expansive property spans 7,000 square feet and features a range of amenities, including a sparkling pool where you can take a refreshing dip on hot summer days, a cinema hall for movie nights with family and friends, and a fully equipped gym where you can stay in shape without ever leaving home. ",
+    "price": "$8,000,000",
+    "status": "sale",
+    "area": "7,000 sq ft",
+    "location": "Malibu, CA",
+    "facilities": [
+      "Pool",
+      "Cinema hall",
+      "Gym"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/HCbL41R/flat2.jpg",
+    "estate_title": "Luxury Apartment in Paris",
+    "id": 6,
+    "segment_name": "Luxurious",
+    "description": "Chic apartment located in the heart of Paris with views of the Eiffel Tower.",
+    "details": "Indulge in the elegance of Parisian living with this chic apartment located in the heart of the city, offering breathtaking views of the iconic Eiffel Tower. Spanning 3,000 square feet, this luxurious apartment combines classic French design with modern amenities to create a space that is both stylish and comfortable. The apartment features a range of amenities, including all services to cater to your every need, a balcony where you can enjoy your morning coffee while taking in the sights and sounds of the city below, and a sauna where you can relax and unwind after a long day of exploring the city. ",
+    "price": "$4,500,000",
+    "status": "rent",
+    "area": "3,000 sq ft",
+    "location": "Paris, France",
+    "facilities": [
+      "All service",
+      "Balcony",
+      "Sauna"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/HCbL41R/flat2.jpg",
+    "estate_title": "Grand Manor House in England",
+    "id": 7,
+    "segment_name": "Luxurious",
+    "description": "Stately manor house set in the English countryside with extensive grounds.",
+    "details": "Step back in time with this stately manor house set amidst the picturesque English countryside. Spread across 15,000 square feet, this grand estate offers a taste of old-world charm and elegance. The manor house is surrounded by lush gardens, where you can take leisurely strolls and admire the beauty of nature. The property also features a pool where you can take a refreshing dip on hot summer days, and charming cottages where guests can stay and enjoy the tranquility of the countryside. ",
+    "price": "$12,000,000",
+    "status": "sale",
+    "area": "15,000 sq ft",
+    "location": "England",
+    "facilities": [
+      "Gardens",
+      "Pool",
+      "Cottages"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/71XDkK5/flat8.jpg",
+    "estate_title": "Mountain Retreat in Aspen",
+    "id": 8,
+    "segment_name": "Luxurious",
+    "description": "Luxury retreat nestled in the mountains of Aspen with ski-in/ski-out access.",
+    "details": " Escape to the breathtaking beauty of the Rocky Mountains with this luxurious retreat nestled in the heart of Aspen. Spanning 8,000 square feet, this mountain retreat offers the perfect blend of rustic charm and modern amenities. The property features a hot tub where you can soak away your cares while taking in the stunning mountain views, a fireplace where you can cozy up on cold winter nights, and a theater where you can enjoy movie nights with family and friends.",
+    "price": "$6,500,000",
+    "status": "sale",
+    "area": "8,000 sq ft",
+    "location": "Aspen, CO",
+    "facilities": [
+      "tub",
+      "Fireplace",
+      "theater"
+    ],
+    "button_text": "View Property"
+  },
+  {
+    "image": "https://i.ibb.co/Gxsh9WT/flat9.jpg",
+    "estate_title": "Villa on the Amalfi Coast",
+    "id": 9,
+    "segment_name": "Luxurious",
+    "description": "Elegant villa overlooking the stunning coastline of the Amalfi Coast.",
+    "details": "Experience the ultimate in luxury living with this elegant villa overlooking the stunning coastline of the Amalfi Coast. Spanning 6,000 square feet, this villa offers the perfect blend of sophistication and relaxation. The property features a pool where you can take a refreshing dip on hot summer days, a terrace where you can soak up the sun while enjoying panoramic views of the Mediterranean Sea, and a gym where you can stay active and fit. ",
+    "price": "$9,500,000",
+    "status": "rent",
+    "area": "6,000 sq ft",
+    "location": "Amalfi,Italy",
+    "facilities": [
+      " pool",
+      "Terrace",
+      "gym"
+    ],
+    "button_text": "View Property"
+  }
+]

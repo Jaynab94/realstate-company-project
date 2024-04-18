@@ -19,7 +19,9 @@ const githubProvider = new GithubAuthProvider()
 
 
 const AuthProvider = ({ children }) => {
-    const [loading, setLoading] = useState(false)
+
+
+    const [loading, setLoading] = useState(true);
 
     const [user, setUser] = useState(null);
     console.log('user ekhne ache vai', user)
@@ -28,7 +30,7 @@ const AuthProvider = ({ children }) => {
     // create user
 
     const createUser = (email, password) => {
-        setLoading(true)
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, email, password)
 
     }
@@ -36,7 +38,7 @@ const AuthProvider = ({ children }) => {
     // sign in user
 
     const signInUser = (email, password) => {
-        setLoading(true)
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
@@ -44,7 +46,7 @@ const AuthProvider = ({ children }) => {
     //log out user
 
     const logOutUser = () => {
-        setLoading(true)
+        setLoading(true);
 
         return signOut(auth);
     }
@@ -52,14 +54,14 @@ const AuthProvider = ({ children }) => {
 
     //google log in
     const googleLogin = () => {
-        setLoading(true)
+        setLoading(true);
         return signInWithPopup(auth, googleProvider)
     }
 
     //github login
 
     const githubLogin = () => {
-        setLoading(true)
+        setLoading(true);
         return signInWithPopup(auth, githubProvider)
     }
 
