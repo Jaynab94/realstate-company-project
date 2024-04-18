@@ -1,17 +1,34 @@
-import { FaChartArea, FaDollarSign, FaLocationArrow } from "react-icons/fa6";
+import { FaLocationArrow } from "react-icons/fa6";
 import 'animate.css';
 import { Link } from "react-router-dom";
+import PropTypes from 'prop-types';
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+
 
 
 const Card = ({ card }) => {
-    // console.log(card)
-    const { image, description, status, estate_title, price, area, location, facilities,id } = card;
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true,
+          
+        })
+        Aos.refresh();
+    }, [])
+    const { image, description, status,
+        estate_title, price, area, location,
+        facilities, id } = card;
 
 
 
 
     return (
-        <div className="card bg-base-100 shadow-xl animate__animated animate__fadeInTopLeft">
+
+
+        <div className="card bg-base-100 shadow-xl " data-aos="slide-right">
             <figure><img src={image} alt="Shoes" /></figure>
             <div className="flex">
                 <div className="bg-red-200 font-semibold border-black border-b-4    rounded-md mr- shadow-2xl border-b-4  p-2 mt-2 ml-4">{price}</div>
@@ -48,6 +65,10 @@ const Card = ({ card }) => {
             </div>
         </div>
     );
+};
+
+Card.propTypes = {
+    card: PropTypes.object.isRequired,
 };
 
 export default Card;

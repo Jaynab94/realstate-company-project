@@ -5,10 +5,10 @@ const RoomAndSuits = () => {
     return (
         <div>
             <Helmet>
-                <title>Luminary Luxe | Suits</title>
+                <title>Luxe | Suits</title>
                 
             </Helmet>
-            <h2>all room</h2>
+            <h2 className="font-bold font-serif text-black text-2xl text-center">Visit our All Luxury Apartment</h2>
         </div>
     );
 };

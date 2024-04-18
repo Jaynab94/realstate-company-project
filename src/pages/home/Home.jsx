@@ -2,23 +2,39 @@ import { Helmet } from "react-helmet-async";
 import Slider from "../slider/Slider";
 import { useLoaderData } from "react-router-dom";
 import Card from "../card/Card";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import OurProduct from "../OurProduct/OurProduct";
 
 
 
 const Home = () => {
+    useEffect(()=>{
+        Aos.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true,
+            mirror: false,
+            delay: 100,
+            disable: false,
+            offset: 100,
+        });
+    },[])
     
     const cards = useLoaderData();
     console.log(cards);
 
 
     return (
-        <div>
+        <div data-aos="slide-left">
+
             <Helmet>
-                <title>Luminary | Home</title>
+                <title>Luxe | Home</title>
             </Helmet>
             <Slider></Slider>
 
-            
+            <OurProduct></OurProduct>
 
 
             {/* card  */}

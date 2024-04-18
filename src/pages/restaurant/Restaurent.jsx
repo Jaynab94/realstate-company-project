@@ -5,7 +5,7 @@ const Restaurent = () => {
     return (
         <div >
             <Helmet>
-                <title> Luminary Luxe | Restaurant</title>
+                <title> Luxe | Restaurant</title>
                 
             </Helmet>
             <h1>our restaurant</h1>

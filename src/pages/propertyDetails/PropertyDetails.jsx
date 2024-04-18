@@ -1,8 +1,22 @@
 
 import { IoArrowBack } from "react-icons/io5";
 import { Link, useLoaderData, useParams } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
+import { Helmet } from "react-helmet-async";
 
 const PropertyDetails = () => {
+    useEffect(() => {
+        Aos.init({
+            duration: 1000,
+            easing: 'ease-in-out-cubic',
+            once: true,
+        });
+
+    }, [])
+
+
     const cards = useLoaderData();
     const { id } = useParams();
     const idInt = parseInt(id);
@@ -12,9 +26,13 @@ const PropertyDetails = () => {
 
     return (
         <div>
-            
+            <Helmet>
+                <title>Luxe |details</title>
+            </Helmet>
+
             <div>
-                <div className="p-5 mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800">
+
+                <div className="p-5  mx-auto sm:p-10 md:p-16 dark:bg-gray-100 dark:text-gray-800" data-aos="slide-down">
                     <div className="flex flex-col max-w-3xl mx-auto overflow-hidden rounded">
                         <img src={card.image} alt="" className="w-full h-60 sm:h-96 dark:bg-gray-500" />
                         <div className="p-6 pb-12 m-4 mx-auto -mt-16 space-y-6 lg:max-w-2xl sm:px-10 sm:mx-12 lg:rounded-md dark:bg-gray-50">

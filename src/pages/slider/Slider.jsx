@@ -30,14 +30,15 @@ const Slider = () => {
             onSwiper={(swiper) => console.log(swiper)}
             onSlideChange={() => console.log('slide change')}
 
+
         >
 
-            
-            <SwiperSlide><img className=' md:w-full md:h-screen ' src={img1} alt="" /></SwiperSlide>
-            <SwiperSlide><img className=' md:w-full md:h-screen ' src={img2} alt="" /></SwiperSlide>
-            <SwiperSlide><img className=' md:w-full md:h-screen ' src={img3} alt="" /></SwiperSlide>
-            <SwiperSlide><img className=' md:w-full md:h-screen ' src={img1} alt="" /></SwiperSlide>
-            <SwiperSlide><img className=' md:w-full md:h-screen ' src={img2} alt="" /></SwiperSlide>
+
+            <SwiperSlide><img className=' md:w-full md:h-screen rounded-3xl ' src={img1} alt="" /></SwiperSlide>
+            <SwiperSlide><img className=' md:w-full md:h-screen  rounded-3xl ' src={img2} alt="" /></SwiperSlide>
+            <SwiperSlide><img className=' md:w-full md:h-screen  rounded-3xl ' src={img3} alt="" /></SwiperSlide>
+            <SwiperSlide><img className=' md:w-full md:h-screen  rounded-3xl ' src={img1} alt="" /></SwiperSlide>
+            <SwiperSlide><img className=' md:w-full md:h-screen  rounded-3xl ' src={img2} alt="" /></SwiperSlide>
 
 
         </Swiper>

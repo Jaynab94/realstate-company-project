@@ -2,7 +2,7 @@ import { LinearGradient } from 'react-text-gradients';
 import img1 from '../../../public/bed 2.jpg'
 import 'animate.css';
 
-import { Link, Navigate, useLocation, useNavigate, } from 'react-router-dom';
+import { Link, useLocation, useNavigate, } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { useContext, useState } from 'react';
 import { AuthContext } from '../../AuthProvider/AuthProvider';
